@@ -1,198 +1,199 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Device Registration & Setup Guide</title>
-  <meta name="description" content="Step-by-step guide to set up and activate Prime Video on smart TVs and streaming devices without any copyright issues.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MyTVGuide — Device Setup & TV Help</title>
+  <meta name="description" content="MyTVGuide provides clear, policy-compliant guides and troubleshooting for TV devices and streaming setup. Contact support@mytvguide.site for help.">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "MyTVGuide",
+    "url": "https://mytvguide.site",
+    "email": "mailto:support@mytvguide.site",
+    "logo": "",
+    "sameAs": []
+  }
+  </script>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #f7faff, #e3edf9);
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      min-height: 100vh;
-      padding: 20px;
-      line-height: 1.6em;
-    }
-    .container {
-      background-color: #ffffff;
-      border-radius: 12px;
-      padding: 25px 20px;
-      width: 100%;
-      max-width: 900px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    }
-    h1 {
-      font-size: 26px;
-      color: #2c3e50;
-      margin-bottom: 8px;
-      text-align: center;
-    }
-    .instructions {
-      font-size: 14px;
-      color: #555;
-      text-align: center;
-    }
-    .code-input input[type="text"] {
-      width: 100%;
-      padding: 14px;
-      margin-top: 20px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 16px;
-      text-align: center;
-    }
-    input::placeholder {
-      font-weight: 500;
-      color: #aaa;
-    }
-    .register-button {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-    }
-    .register-button button {
-      width: 60%;
-      padding: 10px;
-      font-size: 15px;
-      font-weight: bold;
-      background-color: #3498db;
-      color: #fff;
-      border: none;
-      border-radius: 25px;
-      cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-    }
-    .register-button button:hover {
-      background-color: #217dbb;
-      transform: scale(1.03);
-    }
-    .steps, .guide {
-      margin-top: 30px;
-    }
-    .steps h3, .guide h3 {
-      font-size: 18px;
-      color: #3498db;
-      margin-bottom: 10px;
-    }
-    .steps ul, .guide ul {
-      padding-left: 20px;
-    }
-    .steps li, .guide li {
-      margin-bottom: 10px;
-      font-size: 14px;
-      color: #333;
-    }
-    .guide-section {
-      background: #f8f9fa;
-      padding: 15px;
-      border-radius: 8px;
-      margin-top: 15px;
-      border-left: 5px solid #3498db;
-    }
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 22px;
-      }
-      .register-button button {
-        width: 80%;
-      }
-    }
-    @media (max-width: 480px) {
-      .container {
-        padding: 15px;
-      }
-      h1 {
-        font-size: 20px;
-      }
-      .register-button button {
-        width: 90%;
-        font-size: 14px;
-      }
-    }
+    .max-w-prose { max-width: 70ch; }
+    html { scroll-behavior: smooth; }
   </style>
 </head>
-<body>
-  <div class="container">
-    <h1>Register Your Device</h1>
-    <br>
-    <p class="instructions">Easily link your smart TV or streaming device to your account</p>
-    <br>
-    <p class="instructions">Enter the code displayed on your device to start streaming</p>
-
-    <div class="code-input">
-      <input type="text" placeholder="Enter Code" />
+<body class="bg-gray-50 text-gray-800 antialiased">
+  <!-- NAV -->
+  <header class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow">
+    <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
+      <a href="#home" class="flex items-center space-x-3">
+        <div class="bg-white bg-opacity-10 rounded-full p-2">
+          <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+            <rect width="20" height="12" x="2" y="6" rx="2" stroke="currentColor" stroke-width="1.5"></rect>
+            <circle cx="8" cy="12" r="1" fill="currentColor"></circle>
+            <path d="M15 12h1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+          </svg>
+        </div>
+        <span class="font-bold text-lg">MyTVGuide</span>
+      </a>
+      <nav>
+        <ul id="navList" class="hidden md:flex items-center space-x-6 text-sm font-medium">
+          <li><a href="#home" class="hover:underline">Home</a></li>
+          <li><a href="#guides" class="hover:underline">Guides</a></li>
+          <li><a href="#faq" class="hover:underline">FAQ</a></li>
+          <li><a href="#about" class="hover:underline">About</a></li>
+          <li><a href="#privacy" class="hover:underline">Privacy</a></li>
+          <li><a href="#contact" class="hover:underline">Contact</a></li>
+        </ul>
+        <button class="md:hidden p-2 ml-2 text-xl" id="menuBtn" aria-label="Toggle menu">☰</button>
+      </nav>
     </div>
+  </header>
 
-    <div class="register-button">
-      <button id="registerButton">Register</button>
+  <!-- HERO -->
+  <section id="home" class="max-w-6xl mx-auto p-6 text-center">
+    <div class="bg-white rounded-2xl shadow-lg p-8">
+      <h1 class="text-2xl md:text-3xl font-extrabold">Clear, safe TV & device setup guides</h1>
+      <p class="mt-3 text-gray-600 max-w-prose mx-auto">MyTVGuide offers easy step-by-step instructions and troubleshooting for connecting and configuring TV devices and streaming-related features. We provide informational resources only — we do not host or distribute copyrighted content or licensed services.</p>
+      <div class="mt-6 flex justify-center space-x-4">
+        <a href="#guides" class="px-5 py-3 bg-indigo-600 text-white rounded-full shadow hover:opacity-95">View Guides</a>
+        <a href="#contact" class="px-5 py-3 border border-indigo-600 text-indigo-600 rounded-full hover:bg-indigo-50">Contact Support</a>
+      </div>
     </div>
-    <br>
+  </section>
 
-    <div class="steps">
-      <h3>Quick Registration Steps</h3>
-      <ul>
-        <li>Open the streaming app on your TV or device.</li>
-        <li>Select “Register on the website.”</li>
-        <li>Note the code displayed on your screen.</li>
-        <li>Visit the registration page and enter your code.</li>
+  <!-- GUIDES -->
+  <main class="max-w-6xl mx-auto p-6 grid gap-6 md:grid-cols-3">
+    <section id="guides" class="md:col-span-2 bg-white rounded-2xl shadow p-6">
+      <h2 class="text-xl font-semibold">Popular Setup Guides</h2>
+      <p class="text-gray-600 mt-2">Select a guide for step-by-step instructions. These guides are informational and designed to help you configure your device and network safely.</p>
+
+      <article class="mt-4 border rounded-lg p-4">
+        <h3 class="font-semibold">Connecting your TV to Wi‑Fi</h3>
+        <ol class="list-decimal list-inside mt-2 text-gray-700">
+          <li>Open Settings &gt; Network or Wi‑Fi on your TV.</li>
+          <li>Choose your home network and enter the Wi‑Fi password carefully.</li>
+          <li>Wait for the TV to confirm connection. If it fails, restart your router and try again.</li>
+        </ol>
+      </article>
+
+      <article class="mt-4 border rounded-lg p-4">
+        <h3 class="font-semibold">General Linking & Account Steps</h3>
+        <p class="mt-2 text-gray-700">Follow on-screen instructions to sign in or link accounts. Always use the official website shown on your device and avoid sharing credentials on unfamiliar third-party pages.</p>
+      </article>
+
+      <article class="mt-4 border rounded-lg p-4">
+        <h3 class="font-semibold">Troubleshooting common errors</h3>
+        <ul class="list-disc list-inside mt-2 text-gray-700">
+          <li>Restart the device and router.</li>
+          <li>Check for system updates in Settings.</li>
+          <li>Ensure date/time is correct — mismatched system time can block secure connections.</li>
+        </ul>
+      </article>
+
+      <div class="mt-6">
+        <h4 class="font-semibold mb-2">Detailed Guides (Examples)</h4>
+        <ul class="list-disc list-inside text-gray-700">
+          <li><a href="#" class="underline">How to configure network settings</a></li>
+          <li><a href="#" class="underline">Resolving activation & connection errors</a></li>
+          <li><a href="#" class="underline">Setting up parental controls</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SIDEBAR -->
+    <aside class="bg-white rounded-2xl shadow p-6">
+      <h4 class="font-semibold">Quick Help</h4>
+      <p class="text-gray-600 mt-2">If you need direct assistance, contact our support team:</p>
+      <p class="mt-4 font-medium text-indigo-700">📧 <a href="mailto:support@mytvguide.site">support@mytvguide.site</a></p>
+
+      <div class="mt-6">
+        <h5 class="font-semibold">Business Contact</h5>
+        <p class="text-gray-600">MyTVGuide — informational support service</p>
+      </div>
+    </aside>
+  </main>
+
+  <!-- FAQ -->
+  <section id="faq" class="max-w-6xl mx-auto p-6">
+    <div class="bg-white rounded-2xl shadow p-6">
+      <h2 class="text-xl font-semibold">Frequently Asked Questions</h2>
+      <div class="mt-4 space-y-3">
+        <details class="p-3 border rounded"><summary class="font-medium">How long does setup take?</summary><p class="mt-2 text-gray-700">Typical setup completes within 5–15 minutes depending on network speed and device updates.</p></details>
+        <details class="p-3 border rounded"><summary class="font-medium">Can I activate on multiple devices?</summary><p class="mt-2 text-gray-700">Yes. Most services allow multiple devices; check your service provider's terms for limits.</p></details>
+        <details class="p-3 border rounded"><summary class="font-medium">What information does MyTVGuide collect?</summary><p class="mt-2 text-gray-700">Only the information you voluntarily provide via contact form or email. See Privacy Policy for details.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="max-w-6xl mx-auto p-6">
+    <div class="bg-white rounded-2xl shadow p-6">
+      <h2 class="text-xl font-semibold">About MyTVGuide</h2>
+      <p class="mt-2 text-gray-700 max-w-prose">MyTVGuide is an independent informational resource that helps users with TV device setup, connectivity, and basic troubleshooting. We do not provide or distribute paid subscription services or copyrighted content. Our goal is to empower users to use their devices securely and confidently.</p>
+    </div>
+  </section>
+
+  <!-- PRIVACY POLICY -->
+  <section id="privacy" class="max-w-6xl mx-auto p-6">
+    <div class="bg-white rounded-2xl shadow p-6">
+      <h2 class="text-xl font-semibold">Privacy Policy</h2>
+      <p class="mt-2 text-gray-700">Last updated: September 2025</p>
+      <p class="mt-4 text-gray-700">We respect your privacy. This policy explains what information we collect, why we collect it, and how you can manage it.</p>
+      <h3 class="font-semibold mt-4">Information We Collect</h3>
+      <ul class="list-disc list-inside mt-2 text-gray-700">
+        <li>Contact information you provide when you email or use the contact form (name, email, message).</li>
+        <li>Non-personal usage data collected by standard analytics (page visits, device type) — you may opt out via your browser.</li>
       </ul>
+      <h3 class="font-semibold mt-4">How We Use Information</h3>
+      <p class="text-gray-700">We use your contact information to respond to inquiries and provide support. We do not sell or share personal data with third parties except where required by law.</p>
+      <h3 class="font-semibold mt-4">Cookies</h3>
+      <p class="text-gray-700">We use minimal cookies for analytics and basic functionality. You can manage cookie preferences through your browser.</p>
     </div>
+  </section>
 
-    <div class="guide">
-      <h3>Setup Guide for Popular Devices</h3>
-      <div class="guide-section">
-        <strong>1. Fire TV / Stick</strong>
-        <ul>
-          <li>Open the app from the main menu.</li>
-          <li>If not installed, search and add it from the app store.</li>
-          <li>Sign in to start streaming.</li>
-        </ul>
-      </div>
-      <div class="guide-section">
-        <strong>2. Roku</strong>
-        <ul>
-          <li>Navigate to Streaming Channels → Search for the app.</li>
-          <li>Add and launch the channel.</li>
-          <li>Sign in or use the activation code method.</li>
-        </ul>
-      </div>
-      <div class="guide-section">
-        <strong>3. Apple TV</strong>
-        <ul>
-          <li>Search and install the app from the App Store.</li>
-          <li>Open it and log in or enter the displayed code online.</li>
-        </ul>
-      </div>
-      <div class="guide-section">
-        <strong>4. Android TV</strong>
-        <ul>
-          <li>Find and install the app from Google Play Store.</li>
-          <li>Launch and log in to your account.</li>
-        </ul>
-      </div>
-      <div class="guide-section">
-        <strong>5. Smart TVs</strong>
-        <ul>
-          <li>Check if the app is pre-installed or download it from the TV’s app store.</li>
-          <li>Open and log in to enjoy streaming.</li>
-        </ul>
-      </div>
+  <!-- TERMS -->
+  <section id="terms" class="max-w-6xl mx-auto p-6">
+    <div class="bg-white rounded-2xl shadow p-6">
+      <h2 class="text-xl font-semibold">Terms of Use</h2>
+      <p class="mt-2 text-gray-700 max-w-prose">By using MyTVGuide you agree to this site's terms. The content is for informational purposes only and does not replace official documentation or support from device manufacturers or service providers. We make reasonable efforts to keep information accurate but do not guarantee completeness. Use at your own risk.</p>
     </div>
-  </div>
+  </section>
+
+  
+      <p class="text-xs text-gray-500 mt-3">Note: This contact form opens the visitor's email client to send messages (mailto:) or visitors can email support@mytvguide.site directly. For a fully functional server-side contact form, configure a backend endpoint or use a trusted form provider and ensure privacy compliance.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-200 py-6">
+    <div class="max-w-6xl mx-auto text-center px-4">
+      <p class="font-medium">© 2025 MyTVGuide</p>
+      <p class="text-sm mt-2">This site provides informational resources only. We do not distribute or monetize copyrighted content or official service credentials.</p>
+    </div>
+  </footer>
 
   <script>
-    document.getElementById("registerButton").addEventListener("click", function () {
-      window.location.href = "index2.html";
-    });
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    if (menuBtn) {
+      menuBtn.addEventListener('click', () => {
+        const navList = document.getElementById('navList');
+        if (navList) navList.classList.toggle('hidden');
+      });
+    }
+
+    // contact mailto sender
+    function sendMail() {
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const subject = encodeURIComponent('Support request from ' + (name || 'Website visitor'));
+      const body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message);
+      const mailto = 'mailto:support@mytvguide.site?subject=' + subject + '&body=' + body;
+      window.location.href = mailto;
+      return false; // prevent normal form submission
+    }
   </script>
 </body>
 </html>
